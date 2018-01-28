@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jumpstart | Newsletter Generator</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/newsletter.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bg.css">
+		<style type="text/css">			
+			.toggle{ cursor: pointer }
+			.toghide{ display: none }
+		</style>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('.step1').click(function(){
+				$('#1').toggle();
+			});
+			$('.step2').click(function(){
+				$('.2').toggle();
+			});
+			$('.step3').click(function(){
+				$('#3').toggle();
+			});
+			$('.step4').click(function(){
+				$('#4').toggle();
+			});
+		});		
+		</script>
+	</head>
+	<body>
+		<div class="page">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<h1 class="nomarg">Your Jumpstart to the Newsletter Generator</h1>
+					<input type="button" class="btn btn-danger" value="Close this window" onclick="self.close()" style="position:absolute;right:0;top:0;">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<p>Every month, we recieve files (images and word docs) from [ClientName].</p>
+					<p>These files are named easily enough, most of the time the file names will be set according to their designated areas. Else, within the email, it will explain the specific changes.</p>
+					<p>Below is a break down explaning how to generate the newsletter, with very little (if any) coding required:</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<p style="color: #337AB7;"><button class="btn btn-primary step1">Step 1:</button>
+					<b><u><a href="step1.php" target="_blank"> (Add Articles)</a></u></b>
+						<ol id="1" class="toghide">
+							<li><p>Download files from email.</p></li>
+							<li><p>Upload and Crop images using the image cropper. <a href="images/" target="_blank" class="btn btn-primary">Image Cropper</a></p></li>
+							<li><p>Per doc that has been sent, you will see the filename is associated with the sections. The next step is really simple: just copy the title headings from the downloaded doc into the designated title input box, the descriptions will always be the first paragraph in the file.</p></li>
+							<li>
+								<p>For the rest of the document's content - We need to add these articles to the back-end of [ClientName]'s website. This can be done by logging in <a href="yourdomain" target="_blank">here</a></p>
+								<p>This is where the Full-size images you cropped come into play.</p>
+								<p>Just like the articles you add to the newsletter, we will do the same with the titles, and descriptions, <b>BUT</b> with a slight <b>difference</b>:</p>
+								<p>We first need to add articles to get started, to do this follow the steps below:</p>
+									<ul>
+										<li><p>Once logged in successfully, you will find a navbar on the top of the page. Hover over "<b>Extensions</b>", dropdown menu, hover over "<b>News</b>", and select "<b>New Press Feature</b>"</p></li>
+										<li><p>We now see a screen like this: <a href="yourdomain" target="_blank"><img src="howto/article.jpg" style="width:100%"></a></p></li>
+										<li><p>We now add the the title from the heading, (from the doc we got from [ClientName]), add the the rest of the content into the "<b>Body</b>" content editor section. <b><u>Note</u></b>: Do not include the "<b>excerpt/caption</b>", as this breaks the load view. Only add the <b>Title</b> and the <b>Body</b>. </p></li>
+										<li>You should notice that directly under the "<b>Title</b>" box, there is a "<b>Slug</b>", this is handy for the <b>slug</b> (URL link/path) on the newsletter preview. If the link on the newsletter has not been generated correctly, we can always use this slug - as this is the <b>correct</b> slug for the article.</li>
+										<li><p>Lastly, we add the <b>Full-size image</b> to the article, by using the "<b>Browse...</b>" button.</p></li>
+										<li>Once happy with everything, hit that "<b>Submit</b>" button to successfully have added your article.</li>
+										<li><p>Rinse and repeat until all articles have been added.</p></li>
+									</ul>
+							</li>
+							<li><p><b><u>Note:</u></b> Some articles only have titles, some have titles and descriptions.</p></li>
+						</ol>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<p style="color: #31B0D5;"><button class="btn btn-info step2">Step 2:</button>
+					<b><u><a href="step2.php" target="_blank"> (Edit Articles)</a></u></b></p>
+					<p class="2 toghide">This view might be a little intimidating at first glance, but it's quite simple:
+						<ol class="2 toghide">
+							<li><p>If the two columns do not have paragraph tags in them, simply insert them where needed.</p></li>
+							<li><p>You will now notice that there are more input boxes. These new boxes list the article slugs. Slugs are the links to the articles. If the slug is incorrect, you are able to edit them in these boxes.</p></li>
+							<li><p>To preview your changes, the page will automagically redirect you to the preview page.</p></li>
+							<li><p>If you wish to preview the newsletter directly after you have added the articles from step one, you can always refer to the links provided on the dashboard.</p></li>
+						</ol>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<p><button class="btn btn-default step3">Step 3:</button>
+					<b><u> (Previewing Newsletter)</u></b></p>
+					<ol id="3" class="toghide">
+						<li><p>Now that the newsletter has been generated, [ClientName] needs to preview, and review.</p></li>
+						<li><p><b>The Newsletter Generator</b> already saves the content you have just created in a file called "index.html", in the current month's folder. Eg: "/2015/08/".</p><p>Your directory should now look something like this:</p><img src="howto/dir.jpg"></li>
+						<li><p>Once confirming that the file exists and is in the correct place, we can now send [ClientName] the preview of the newsletter. To do this, we can go to the URL of this directory, located here: "http://[ClientName].co.za/newsletter/ontheblog/2015/<b>MONTH</b>". The typical path will look like this: "http://[ClientName].co.za/newsletter/ontheblog/2015/08/". Here's a <a href="http://[ClientName].co.za/newsletter/ontheblog/2015/08/" target="_blank">preview</a>.</p></li>		
+					</ol>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<p style="color: #5CB85C;"><button class="btn btn-success step4">Step 4:</button>
+					<b><u> (GraphicMail)</u></b></p>
+					<div id="4" class="toghide">
+						<p>We are now at the last point of the newsletter! Congratulations to making it this far, what a journey it has been!!!</p>
+						<p>Setting up the GraphicMail Newsletter:</p>
+						<ol class="4">
+							<li><p>Login <a href="http://graphicmail.co.za/login" target="_blank">here</a>.</p></li>
+							<li><img src="howto/graphicmail.jpg">Click "<b><u>Newsletters</u></b>", select "<b><u>Import from file</u></b>" from the navigation bar.</li>
+							<li><p>Select "<b>Browse</b>" and select your <b>index.html</b> file you created earlier. Ensure your settings are the <b><u>same</u></b> as this: <img src="howto/import.jpg"></p></li>
+							<li><p><b>Scroll down</b> the page, and ensure your settings are the same as this: <img src="howto/import2.jpg"></p></li>
+							<li><p>Hit that "<b>import</b>" button when you're happy. This will now upload the newsletter.</p></li>
+							<li><p>We just need to <b>preview</b>, to ensure everything went well with the upload, to do this we navigate to the "<b>Edit &amp; Manage</b>" link on the navigation bar.</p></li>
+							<li><p>We now find ourselves at a screen that looks like this: <img src="howto/editman.jpg">.</p>
+							<p>Locate and select your newly added newsletter, make sure the small <b>tickbox</b> next to it <b>is selected</b>.</p></li>
+							<li><p>On the right-hand side, click "<b>Preview</b>" and we will have a screen similar to this: <img src="howto/preview.jpg"></p><p>You will see on the <b><u>top of this screen</u></b> there is "<b>Link to this newsletter:</b>" <b>copy the url</b> after this text and send this to [ClientName].</p></li>
+							<li><p>Newsletter is done! Congrats!!!</p></li>
+							<li><p>P.S. Don't worry, this gets easier the more times you do this.</p></li>
+						</ol>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</body>
+</html>
